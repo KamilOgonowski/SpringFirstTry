@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="ao" class="com.kam.beans.AllegroOne"/> <!-- id is like a reference variable, whenerever I need and object I can get it with the class name or id -->
+    <bean id="dp" class="com.kam.beans.DPD"/>      <!-- <beans/> -> selfclosing tag can be used -->
+    <bean id="ip" class="com.kam.beans.InPost"/>
+    <bean id ="pc" class="com.kam.beans.Pocztex"/>
+    <bean id ="al" class="com.kam.beans.Allegro">
+    </bean>
+
+   
+
+</beans>
