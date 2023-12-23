@@ -5,11 +5,20 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
+<!--     dependend objects -->
     <bean id="ao" class="com.kam.beans.AllegroOne"/> <!-- id is like a reference variable, whenerever I need and object I can get it with the class name or id -->
     <bean id="dp" class="com.kam.beans.DPD"/>      <!-- <beans/> -> selfclosing tag can be used -->
     <bean id="ip" class="com.kam.beans.InPost"/>
     <bean id ="pc" class="com.kam.beans.Pocztex"/>
+    
+    <!-- target class -->
     <bean id ="al" class="com.kam.beans.Allegro">
+    
+    <!-- Setter Injection and as it is inside another class it means that the Allegro class is a target class as I am going to inject dependency through the setter -->
+    <property ref="pc" name="service"></property>  <!-- setService -> conversion to service -> this conversion is called as: "JavaBeans Property Naming Conventions".-->
+    <constructor-arg ref="ip" ></constructor-arg> <!-- setter of course dominates the value of the aboject injected firstly in contructor -->
+    
+    
     </bean>
 
    

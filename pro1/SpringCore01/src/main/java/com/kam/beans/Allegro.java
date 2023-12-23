@@ -10,6 +10,10 @@ public class Allegro{
 		System.out.println("Allegro object is created");
 	}
 	
+	public Allegro(CourierService service) {
+		this.service = service;
+	}
+	
 	private CourierService service;
 	
 	public void setService(CourierService service) {
